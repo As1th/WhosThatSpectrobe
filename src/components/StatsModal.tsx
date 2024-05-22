@@ -1,12 +1,12 @@
 import { useCallback, useMemo } from 'preact/hooks';
 import type { JSXInternal } from 'preact/src/jsx';
 
+import styles from './css/StatsModal.module.css';
 import { POKEMON_NAMES } from '../constants/pokemon';
 import { useAppDispatch, useAppSelector } from '../store';
 import { StatsTableKey, setStatsTableSort } from '../store/statsSlice';
 import { useLang, useSettings, useStats } from '../util/hooks';
 import { formatStatTime } from '../util/stats';
-import styles from './css/StatsModal.module.css';
 
 function isNotNull<T> (arg: T): arg is Exclude<T, null> {
   return arg !== null;

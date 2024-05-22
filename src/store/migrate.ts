@@ -1,9 +1,9 @@
 import { store } from '.';
+import { SettingsState, setAllSettings } from './settingsSlice';
+import { StatsPerDifficultyArray, StatsState, setMigratedStats } from './statsSlice';
 import { Difficulty, GenerationId } from '../constants';
 import type { LanguageId } from '../constants/lang';
 import { PokemonNumber } from '../constants/pokemon';
-import { SettingsState, setAllSettings } from './settingsSlice';
-import { StatsPerDifficultyArray, StatsState, setMigratedStats } from './statsSlice';
 
 const SETTINGS_LS_KEY = 'wtp_settings';
 const RECORDS_LS_KEY = 'wtp_records';

@@ -1,9 +1,7 @@
 node_modules
 index.js
-public/images/*
 !public/images/flags/
 !public/images/icons/
-public/sounds/*
 *.zip
 .DS_Store
 dist/

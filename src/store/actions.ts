@@ -1,7 +1,7 @@
 import { AppDispatch, RootState } from '.';
-import { getPokemonNumbers } from '../util/pokemon';
 import { goToNextIndex, setNewPokemonList } from './gameSlice';
 import { processPendingSettings } from './settingsSlice';
+import { getPokemonNumbers } from '../util/pokemon';
 
 export const resetPokemon = () => ((dispatch: AppDispatch, getState: () => any) => {
   // redux-persist doesn't play super nicely with Redux v5, so we define the getState argument above as returning

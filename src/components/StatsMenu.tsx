@@ -1,9 +1,9 @@
 import { useMemo, useState } from 'preact/hooks';
 
+import StatsModal from './StatsModal';
 import { POKEMON_NAMES } from '../constants/pokemon';
 import { useGameState, useLang, useSettings, useStats } from '../util/hooks';
 import { formatStatTime } from '../util/stats';
-import StatsModal from './StatsModal';
 
 /** These props are only used in the mobile view. The stats menu is always visible on desktop. */
 type StatsMenuProps = {

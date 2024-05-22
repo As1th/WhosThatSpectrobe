@@ -1,5 +1,9 @@
 import { useCallback, useEffect } from 'preact/hooks';
 
+import AnswerInput from './AnswerInput';
+import AudioPlayer from './AudioPlayer';
+import GenerationFinished from './GenerationFinished';
+import PokemonSilhouette from './PokemonSilhouette';
 import { DIFFICULTY, MILLISECONDS_BETWEEN_POKEMON } from '../constants';
 import { useAppDispatch } from '../store';
 import { goToNextPokemon } from '../store/actions';
@@ -7,10 +11,7 @@ import { goToNextIndex } from '../store/gameSlice';
 import { processPendingSettings } from '../store/settingsSlice';
 import { useLang, useGameState, useSettings } from '../util/hooks';
 import { preloadPokemonMedia } from '../util/pokemon';
-import AnswerInput from './AnswerInput';
-import AudioPlayer from './AudioPlayer';
-import GenerationFinished from './GenerationFinished';
-import PokemonSilhouette from './PokemonSilhouette';
+
 
 type GameAreaProps = {
   onMenuOpen: (menu: 'settings' | 'stats') => void;

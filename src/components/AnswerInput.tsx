@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'preact/hooks';
 import type { JSXInternal } from 'preact/src/jsx';
 
+import CountdownLoader from './CountdownLoader';
 import { LANGUAGES } from '../constants/lang';
 import { POKEMON_NAMES } from '../constants/pokemon';
 import { useAppDispatch } from '../store';
@@ -8,7 +9,7 @@ import { goToNextPokemon } from '../store/actions';
 import { revealPokemon } from '../store/gameSlice';
 import { useCurrentPokemonNumber, useGameState, useLang, useSettings } from '../util/hooks';
 import { removeAccents, soundAlike } from '../util/spelling';
-import CountdownLoader from './CountdownLoader';
+
 
 const AnswerInput = () => {
   const dispatch = useAppDispatch();
