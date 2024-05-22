@@ -33,6 +33,10 @@
     "typescript": "^5.4.5",
     "vite": "^5.2.11"
   },
+  "scripts": {
+  "deploy": "gh-pages -d dist",
+  "typecheck": "tsc --noEmit"
+  },
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.7",
     "classnames": "^2.5.1",

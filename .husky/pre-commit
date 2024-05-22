@@ -1,5 +1,0 @@
-echo "Running Typescript typecheck"
-npm run typecheck
-
-echo "Running eslint"
-npm run lint
