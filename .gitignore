@@ -8,8 +8,6 @@ dist/
 *.css.d.ts
 
 # Directories from the old app structure
-images/
-sounds/
 /test-results/
 /playwright-report/
 /blob-report/
