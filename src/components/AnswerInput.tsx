@@ -119,7 +119,7 @@ const AnswerInput = () => {
       </div>
 
       {gameState.answered ? (
-        {/* <div className="also-known-as">
+        <div className="also-known-as">
           <h2>{lang.alsoknownas}</h2>
           <ul>
             {Object.values(LANGUAGES)
@@ -131,7 +131,7 @@ const AnswerInput = () => {
                 </li>
               ))}
           </ul>
-        </div> */}
+        </div>
       ) : (
         <button
           className="dont-know-button"
