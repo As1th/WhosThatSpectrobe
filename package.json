@@ -6,6 +6,7 @@
     "build": "vite build",
     "serve": "tcm --watch -p \"src/**/*.module.css\" & vite",
     "typecheck": "npx tsc --noEmit",
+	"deploy": "gh-pages -d dist",
     "lint": "eslint src --ext .js,.jsx,.ts,.tsx",
     "prepare": "husky",
     "test": "playwright test"
@@ -32,10 +33,6 @@
     "typed-css-modules": "^0.9.1",
     "typescript": "^5.4.5",
     "vite": "^5.2.11"
-  },
-  "scripts": {
-  "deploy": "gh-pages -d dist",
-  "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.7",
