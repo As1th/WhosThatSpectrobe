@@ -89,4 +89,4 @@ export const GENERATIONS: { [key in GenerationId]: Generation } = {
   },
 } as const;
 
-export const MILLISECONDS_BETWEEN_POKEMON = 3000;
+export const MILLISECONDS_BETWEEN_POKEMON = 4500;

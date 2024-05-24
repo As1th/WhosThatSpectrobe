@@ -93,7 +93,7 @@ ul {
 /* Language selector */
 
 .language-selector-flags {
-  display: flex;
+  display: none;
   gap: 4px;
   align-self: flex-end;
   margin-bottom: 10px;
@@ -345,7 +345,7 @@ header button {
 }
 
 .also-known-as ul {
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
@@ -356,7 +356,7 @@ header button {
 }
 
 .also-known-as ul li {
-  display: flex;
+  display: none;
   align-items: center;
   gap: 4px;
   color: var(--color-text-contrast);
@@ -557,6 +557,7 @@ footer a {
   }
 
   .also-known-as {
+    display: none;
     width: 100%;
     padding-right: 60px; /* try to avoid overlaying the count text */
   }
