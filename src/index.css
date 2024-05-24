@@ -341,7 +341,9 @@ header button {
 }
 
 .also-known-as h2 {
-  font-size: 100%;
+  cursor: pointer;
+  text-shadow: 1px 1px var(--color-negative);
+  font-size: 110%;
 }
 
 .also-known-as ul {
