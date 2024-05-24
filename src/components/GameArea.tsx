@@ -36,7 +36,7 @@ const GameArea = ({ onMenuOpen }: GameAreaProps) => {
       }
 
       const timeoutId = setTimeout(() => {
-        dispatch(goToNextPokemon());
+        //dispatch(goToNextPokemon());
       }, MILLISECONDS_BETWEEN_POKEMON);
 
       return () => clearTimeout(timeoutId);
