@@ -29,7 +29,9 @@ const AnswerInput = () => {
   }, []);
 
   const [guess, setGuess] = useState('');
-
+  const handleClick = () => {
+    dispatch(goToNextPokemon());
+  };
   const number = useCurrentPokemonNumber();
   const pokemonNames = useMemo(() => (
     POKEMON_NAMES.find((pokemon) => pokemon.number === number)!.names
@@ -120,7 +122,7 @@ const AnswerInput = () => {
 
       {gameState.answered ? (
         <div className="also-known-as">
-          <h2>{lang.alsoknownas}</h2>
+          <h2 onClick={handleClick}>Next! (Press Enter ⏎)</h2>
           <ul>
             {Object.values(LANGUAGES)
               .filter((lang) => lang.code !== settings.language)
