@@ -1,6 +1,6 @@
 # Who's That Spectrobe?
 
-> See as1th.github.io/WhosThatSpectrobe/ if you just want to play the game.
+> See [http://as1th.github.io/WhosThatSpectrobe/]http://as1th.github.io/WhosThatSpectrobe/ if you just want to play the game.
 
 A browser-based game in which Spectrobe silhouettes are shown to the user and they guess which Spectrobe it is.
 
