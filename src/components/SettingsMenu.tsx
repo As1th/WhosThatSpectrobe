@@ -98,7 +98,7 @@ const SettingsMenu = ({ isOpen, onClose }: SettingsMenuProps) => {
         )}
 
         <div className="menu-section">
-          <h2>{lang.sound}</h2>
+          {/* <h2>{lang.sound}</h2> */}
 
           <div className="menu-section-inner settings-list-sound">
             <button

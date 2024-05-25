@@ -191,7 +191,7 @@ ul {
 }
 
 .settings-list-sound {
-  display: grid;
+  display: none;
   grid-template-columns: repeat(2, 1fr);
 }
 
