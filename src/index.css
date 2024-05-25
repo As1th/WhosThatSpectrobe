@@ -1,5 +1,5 @@
 :root {
-  --color-background: #d7dbdd;
+  --color-background: #181818;
   --color-box-background: rgba(255, 255, 255, 0.25);
   --color-side-box: #34495e;
   --color-side-box-selected: #fff;
@@ -133,8 +133,8 @@ ul {
 .menu h2 {
   font-size: 100%;
   margin-bottom: 2px;
-  color: var(--color-side-box);
-  text-shadow: 1px 1px var(--color-text-contrast);
+  color: var(--color-text-contrast);
+  text-shadow: 1px 1px var(--color-side-box);
   text-transform: capitalize;
 }
 
@@ -203,7 +203,7 @@ ul {
 button.see-all-stats-button {
   background-color: transparent;
   font-size: 80%;
-  color: var(--color-side-box);
+  color: var(--color-text-contrast);
 }
 
 /* Game Area */
@@ -394,15 +394,15 @@ header button {
 }
 
 footer {
-  color: var(--color-text-muted);
+  color: var(--color-text-contrast);
   font-size: 75%;
   margin: 1em;
   text-align: center;
-  text-shadow: 1px 1px #e1e1e1;
+  text-shadow: 1px 1px #424242;
 }
 
 footer a {
-  color: var(--color-text-muted);
+  color: var(--color-primary);
 }
 
 @media (max-width: 460px) {
