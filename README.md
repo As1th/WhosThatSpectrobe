@@ -1,16 +1,17 @@
-# Who's That Pokémon?
+# Who's That Spectrobe?
 
-> See https://gearoid.me/pokemon/ for a live demo.
+> See http://as1th.github.io/WhosThatSpectrobe/ if you just want to play the game.
 
-A browser-based game in which Pokémon silhouettes are shown to the user and they guess which Pokémon it is.
+A browser-based game in which Spectrobe silhouettes are shown to the user and they guess which Spectrobe it is.
 
 * Silhouettes are generated dynamically in-browser using the canvas tag
 * Multiple difficulty settings, which choose the image source for generating the silhouette
 * User-facing stats including correct streaks and times taken
 
 ## Development
+### (For programmers; not important if you just want to play the game. See link above to play.)
 
-You will need [node and npm](https://nodejs.org/en/) set up to get the code running locally. You will also need to download the Pokémon images and sounds, because they are not included in this repository. You can download them from https://gearoid.me/pokemon/downloads/pokemedia.zip. Unzip this and put `images/` and `sounds/` in the `public` directory.
+You will need [node and npm](https://nodejs.org/en/) set up to get the code running locally.
 
 Once you have done this, install the dependencies by running:
 
@@ -30,17 +31,9 @@ To build the site to be deployed online, run:
 npm run build
 ```
 
-## Testing
-
-There is some basic testing set up using [Playwright](https://playwright.dev). It does a full playthrough of the game on default settings in Chrome, Firefox and Safari. To run these tests, run:
-
-```
-npm test
-```
 
 ## Licence
 This code is licensed under a [Creative Commons Attribution-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/).
 
-All the Pokémon names, images and sounds are copyrighted by Nintendo.
+All the Spectrobe names, images and sounds are copyrighted by Disney.
 
-Flag icons are from https://github.com/lipis/flag-icons
