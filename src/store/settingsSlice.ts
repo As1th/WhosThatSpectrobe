@@ -18,7 +18,7 @@ export type SettingsState = {
 
 const initialState: SettingsState = {
   difficulty: DIFFICULTY.NORMAL,
-  generations: [1, 2, 3, 4, 5, 6, 7, 8, 9],
+  generations: [1],
   forgivingSpellingEnabled: false,
   soundEnabled: false,
   language: 'en',
