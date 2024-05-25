@@ -58,7 +58,7 @@ const LANG_EN = {
   genfinished: "There are no Spectrobes left! Why not try a different generation or difficulty? Or you can start again with the same settings. Note that Gen 8 and 9 don't support Ultra and Master difficulties as these games don't have sprites.",
   startAgain: 'Start again',
   infobox: 'NEW: Indigo Disk support added! Since Gen 8, Spectrobes do not have sprites available, so only Easy, Normal and Elite modes are supported. If you find any issues, let me know on GitHub!',
-  footer: 'Who\'s That Spectrobe game by <a href="https://twitter.com/AsithDevs" title="Asith\'s Twitter">Asith</a>.<br />Images and sounds compiled by <a href="https://twitter.com/AsithDevs" title="Asith\'s Twitter">Asith</a>. Images and sounds &copy; Disney.<br />Based on Who\'s That Pokémon by <a href="https://github.com/menardi/whosthatpokemon" title="Who\'s That Pokémon on Github">sora10pls</a>.  ',
+  footer: 'Who\'s That Spectrobe game by <a href="https://twitter.com/AsithDevs" title="Asith\'s Twitter">Asith</a>.<br />Images and sounds compiled by <a href="https://twitter.com/AsithDevs" title="Asith\'s Twitter">Asith</a>. Images and sounds &copy; Disney.<br />Based on Who\'s That Pokémon by <a href="https://github.com/menardi/whosthatpokemon" title="Who\'s That Pokémon on Github">Menardi</a>.  ',
   language: 'Language',
   settings: 'Settings',
   eliteNeedsAudio: 'You must set Sound to On to play in Elite mode',
