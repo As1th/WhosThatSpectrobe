@@ -1,7 +1,7 @@
 export const POKEMON_NAMES = [{
   names: {
     de: 'bisasam',
-    en: 'bulbasaur',
+    en: 'vilar',
     fr: 'bulbizarre',
     ja: 'フシギダネ',
     zh: '妙蛙种子',
@@ -10,7 +10,7 @@ export const POKEMON_NAMES = [{
 },{
   names: {
     de: 'bisaknosp',
-    en: 'ivysaur',
+    en: 'vilamasta',
     fr: 'herbizarre',
     ja: 'フシギソウ',
     zh: '妙蛙草',
@@ -19,7 +19,7 @@ export const POKEMON_NAMES = [{
 },{
   names: {
     de: 'bisaflor',
-    en: 'venusaur',
+    en: 'vilanox',
     fr: 'florizarre',
     ja: 'フシギバナ',
     zh: '妙蛙花',
@@ -28,7 +28,7 @@ export const POKEMON_NAMES = [{
 },{
   names: {
     de: 'glumanda',
-    en: 'charmander',
+    en: 'segu',
     fr: 'salamèche',
     ja: 'ヒトカゲ',
     zh: '小火龙',
@@ -37,7 +37,7 @@ export const POKEMON_NAMES = [{
 },{
   names: {
     de: 'glutexo',
-    en: 'charmeleon',
+    en: 'segulos',
     fr: 'reptincel',
     ja: 'リザード',
     zh: '火恐龙',
@@ -46,7 +46,7 @@ export const POKEMON_NAMES = [{
 },{
   names: {
     de: 'glurak',
-    en: 'charizard',
+    en: 'segulara',
     fr: 'dracaufeu',
     ja: 'リザードン',
     zh: '喷火龙',
@@ -55,7 +55,7 @@ export const POKEMON_NAMES = [{
 },{
   names: {
     de: 'schiggy',
-    en: 'squirtle',
+    en: 'harumi',
     fr: 'carapuce',
     ja: 'ゼニガメ',
     zh: '杰尼龟',
@@ -64,7 +64,7 @@ export const POKEMON_NAMES = [{
 },{
   names: {
     de: 'schillok',
-    en: 'wartortle',
+    en: 'harumite',
     fr: 'carabaffe',
     ja: 'カメール',
     zh: '卡咪龟',
@@ -73,7 +73,7 @@ export const POKEMON_NAMES = [{
 },{
   names: {
     de: 'turtok',
-    en: 'blastoise',
+    en: 'harumitey',
     fr: 'tortank',
     ja: 'カメックス',
     zh: '水箭龟',
@@ -82,7 +82,7 @@ export const POKEMON_NAMES = [{
 },{
   names: {
     de: 'raupy',
-    en: 'caterpie',
+    en: 'spiko',
     fr: 'chenipan',
     ja: 'キャタピー',
     zh: '绿毛虫',
@@ -91,7 +91,7 @@ export const POKEMON_NAMES = [{
 },{
   names: {
     de: 'safcon',
-    en: 'metapod',
+    en: 'spikan',
     fr: 'chrysacier',
     ja: 'トランセル',
     zh: '铁甲蛹',
@@ -100,7 +100,7 @@ export const POKEMON_NAMES = [{
 },{
   names: {
     de: 'smettbo',
-    en: 'butterfree',
+    en: 'spikanor',
     fr: 'papilusion',
     ja: 'バタフリー',
     zh: '巴大蝶',
@@ -109,7 +109,7 @@ export const POKEMON_NAMES = [{
 },{
   names: {
     de: 'hornliu',
-    en: 'weedle',
+    en: 'nagu',
     fr: 'aspicot',
     ja: 'ビードル',
     zh: '独角虫',
@@ -118,7 +118,7 @@ export const POKEMON_NAMES = [{
 },{
   names: {
     de: 'kokuna',
-    en: 'kakuna',
+    en: 'naguryu',
     fr: 'coconfort',
     ja: 'コクーン',
     zh: '铁壳蛹',
@@ -127,7 +127,7 @@ export const POKEMON_NAMES = [{
 },{
   names: {
     de: 'bibor',
-    en: 'beedrill',
+    en: 'naguzoro',
     fr: 'dardargnan',
     ja: 'スピアー',
     zh: '大针蜂',
@@ -136,7 +136,7 @@ export const POKEMON_NAMES = [{
 },{
   names: {
     de: 'taubsi',
-    en: 'pidgey',
+    en: 'inkana',
     fr: 'roucool',
     ja: 'ポッポ',
     zh: '波波',
@@ -145,7 +145,7 @@ export const POKEMON_NAMES = [{
 },{
   names: {
     de: 'tauboga',
-    en: 'pidgeotto',
+    en: 'inkanapa',
     fr: 'roucoups',
     ja: 'ピジョン',
     zh: '比比鸟',
@@ -154,7 +154,7 @@ export const POKEMON_NAMES = [{
 },{
   names: {
     de: 'tauboss',
-    en: 'pidgeot',
+    en: 'inkaflare',
     fr: 'roucarnage',
     ja: 'ピジョット',
     zh: '大比鸟',
@@ -163,7 +163,7 @@ export const POKEMON_NAMES = [{
 },{
   names: {
     de: 'rattfratz',
-    en: 'rattata',
+    en: 'dongor',
     fr: 'rattata',
     ja: 'コラッタ',
     zh: '小拉达',
@@ -172,7 +172,7 @@ export const POKEMON_NAMES = [{
 },{
   names: {
     de: 'rattikarl',
-    en: 'raticate',
+    en: 'dongora',
     fr: 'rattatac',
     ja: 'ラッタ',
     zh: '拉达',
@@ -181,7 +181,7 @@ export const POKEMON_NAMES = [{
 },{
   names: {
     de: 'habitak',
-    en: 'spearow',
+    en: 'dongiga',
     fr: 'piafabec',
     ja: 'オニスズメ',
     zh: '烈雀',
@@ -190,7 +190,7 @@ export const POKEMON_NAMES = [{
 },{
   names: {
     de: 'ibitak',
-    en: 'fearow',
+    en: 'bartor',
     fr: 'rapasdepic',
     ja: 'オニドリル',
     zh: '大嘴雀',
@@ -199,7 +199,7 @@ export const POKEMON_NAMES = [{
 },{
   names: {
     de: 'rettan',
-    en: 'ekans',
+    en: 'bartolor',
     fr: 'abo',
     ja: 'アーボ',
     zh: '阿柏蛇',
@@ -208,7 +208,7 @@ export const POKEMON_NAMES = [{
 },{
   names: {
     de: 'arbok',
-    en: 'arbok',
+    en: 'bartolosa',
     fr: 'arbok',
     ja: 'アーボック',
     zh: '阿柏怪',
@@ -217,7 +217,7 @@ export const POKEMON_NAMES = [{
 },{
   names: {
     de: 'pikachu',
-    en: 'pikachu',
+    en: 'aoi',
     fr: 'pikachu',
     ja: 'ピカチュウ',
     zh: '皮卡丘',
@@ -226,7 +226,7 @@ export const POKEMON_NAMES = [{
 },{
   names: {
     de: 'raichu',
-    en: 'raichu',
+    en: 'aoba',
     fr: 'raichu',
     ja: 'ライチュウ',
     zh: '雷丘',
@@ -235,7 +235,7 @@ export const POKEMON_NAMES = [{
 },{
   names: {
     de: 'sandan',
-    en: 'sandshrew',
+    en: 'aobasar',
     fr: 'sabelette',
     ja: 'サンド',
     zh: '穿山鼠',
@@ -244,7 +244,7 @@ export const POKEMON_NAMES = [{
 },{
   names: {
     de: 'sandamer',
-    en: 'sandslash',
+    en: 'komainu',
     fr: 'sablaireau',
     ja: 'サンドパン',
     zh: '穿山王',
@@ -253,7 +253,7 @@ export const POKEMON_NAMES = [{
 },{
   names: {
     de: 'nidoran',
-    en: 'nidoran',
+    en: 'komanoto',
     fr: 'nidoran',
     ja: 'ニドラン',
     zh: '尼多兰',
@@ -262,7 +262,7 @@ export const POKEMON_NAMES = [{
 },{
   names: {
     de: 'nidorina',
-    en: 'nidorina',
+    en: 'komadoros',
     fr: 'nidorina',
     ja: 'ニドリーナ',
     zh: '尼多娜',
@@ -271,7 +271,7 @@ export const POKEMON_NAMES = [{
 },{
   names: {
     de: 'nidoqueen',
-    en: 'nidoqueen',
+    en: 'shakin',
     fr: 'nidoqueen',
     ja: 'ニドクイン',
     zh: '尼多后',
@@ -280,7 +280,7 @@ export const POKEMON_NAMES = [{
 },{
   names: {
     de: 'nidoran',
-    en: 'nidoran',
+    en: 'shakor',
     fr: 'nidoran',
     ja: 'ニドラン',
     zh: '尼多朗',
@@ -289,7 +289,7 @@ export const POKEMON_NAMES = [{
 },{
   names: {
     de: 'nidorino',
-    en: 'nidorino',
+    en: 'shakoblad',
     fr: 'nidorino',
     ja: 'ニドリーノ',
     zh: '尼多力诺',
@@ -298,7 +298,7 @@ export const POKEMON_NAMES = [{
 },{
   names: {
     de: 'nidoking',
-    en: 'nidoking',
+    en: 'zoza',
     fr: 'nidoking',
     ja: 'ニドキング',
     zh: '尼多王',
@@ -307,7 +307,7 @@ export const POKEMON_NAMES = [{
 },{
   names: {
     de: 'piepi',
-    en: 'clefairy',
+    en: 'zozane',
     fr: 'mélofée',
     ja: 'ピッピ',
     zh: '皮皮',
@@ -316,7 +316,7 @@ export const POKEMON_NAMES = [{
 },{
   names: {
     de: 'pixi',
-    en: 'clefable',
+    en: 'zozanero',
     fr: 'mélodelfe',
     ja: 'ピクシー',
     zh: '皮可西',
@@ -325,7 +325,7 @@ export const POKEMON_NAMES = [{
 },{
   names: {
     de: 'vulpix',
-    en: 'vulpix',
+    en: 'grilda',
     fr: 'goupix',
     ja: 'ロコン',
     zh: '六尾',
@@ -334,7 +334,7 @@ export const POKEMON_NAMES = [{
 },{
   names: {
     de: 'vulnona',
-    en: 'ninetales',
+    en: 'grilden',
     fr: 'feunard',
     ja: 'キュウコン',
     zh: '九尾',
@@ -343,7 +343,7 @@ export const POKEMON_NAMES = [{
 },{
   names: {
     de: 'pummeluff',
-    en: 'jigglypuff',
+    en: 'grildragos',
     fr: 'rondoudou',
     ja: 'プリン',
     zh: '胖丁',
@@ -352,7 +352,7 @@ export const POKEMON_NAMES = [{
 },{
   names: {
     de: 'knuddeluff',
-    en: 'wigglytuff',
+    en: 'gejio',
     fr: 'grodoudou',
     ja: 'プクリン',
     zh: '胖可丁',
@@ -361,7 +361,7 @@ export const POKEMON_NAMES = [{
 },{
   names: {
     de: 'zubat',
-    en: 'zubat',
+    en: 'gejigen',
     fr: 'nosferapti',
     ja: 'ズバット',
     zh: '超音蝠',
@@ -370,7 +370,7 @@ export const POKEMON_NAMES = [{
 },{
   names: {
     de: 'golbat',
-    en: 'golbat',
+    en: 'gejigage',
     fr: 'nosferalto',
     ja: 'ゴルバット',
     zh: '大嘴蝠',
@@ -379,7 +379,7 @@ export const POKEMON_NAMES = [{
 },{
   names: {
     de: 'myrapla',
-    en: 'oddish',
+    en: 'kasumi',
     fr: 'mystherbe',
     ja: 'ナゾノクサ',
     zh: '走路草',
@@ -388,7 +388,7 @@ export const POKEMON_NAMES = [{
 },{
   names: {
     de: 'duflor',
-    en: 'gloom',
+    en: 'kasumite',
     fr: 'ortide',
     ja: 'クサイハナ',
     zh: '臭臭花',
@@ -397,7 +397,7 @@ export const POKEMON_NAMES = [{
 },{
   names: {
     de: 'giflor',
-    en: 'vileplume',
+    en: 'kasumire',
     fr: 'rafflesia',
     ja: 'ラフレシア',
     zh: '霸王花',
@@ -406,7 +406,7 @@ export const POKEMON_NAMES = [{
 },{
   names: {
     de: 'paras',
-    en: 'paras',
+    en: 'samukabu',
     fr: 'paras',
     ja: 'パラス',
     zh: '派拉斯',
@@ -415,7 +415,7 @@ export const POKEMON_NAMES = [{
 },{
   names: {
     de: 'parasek',
-    en: 'parasect',
+    en: 'samurite',
     fr: 'parasect',
     ja: 'パラセクト',
     zh: '派拉斯特',
@@ -424,7 +424,7 @@ export const POKEMON_NAMES = [{
 },{
   names: {
     de: 'bluzuk',
-    en: 'venonat',
+    en: 'samugeki',
     fr: 'mimitoss',
     ja: 'コンパン',
     zh: '毛球',
@@ -433,7 +433,7 @@ export const POKEMON_NAMES = [{
 },{
   names: {
     de: 'omot',
-    en: 'venomoth',
+    en: 'kubaku',
     fr: 'aéromite',
     ja: 'モルフォン',
     zh: '摩鲁蛾',
@@ -442,7 +442,7 @@ export const POKEMON_NAMES = [{
 },{
   names: {
     de: 'digda',
-    en: 'diglett',
+    en: 'kuganon',
     fr: 'taupiqueur',
     ja: 'ディグダ',
     zh: '地鼠',
@@ -451,7 +451,7 @@ export const POKEMON_NAMES = [{
 },{
   names: {
     de: 'digdri',
-    en: 'dugtrio',
+    en: 'kugaster',
     fr: 'triopikeur',
     ja: 'ダグトリオ',
     zh: '三地鼠',
@@ -460,7 +460,7 @@ export const POKEMON_NAMES = [{
 },{
   names: {
     de: 'mauzi',
-    en: 'meowth',
+    en: 'masetto',
     fr: 'miaouss',
     ja: 'ニャース',
     zh: '喵喵',
@@ -469,7 +469,7 @@ export const POKEMON_NAMES = [{
 },{
   names: {
     de: 'snobilikat',
-    en: 'persian',
+    en: 'maserobo',
     fr: 'persian',
     ja: 'ペルシアン',
     zh: '猫老大',
@@ -478,7 +478,7 @@ export const POKEMON_NAMES = [{
 },{
   names: {
     de: 'enton',
-    en: 'psyduck',
+    en: 'masetosu',
     fr: 'psykokwak',
     ja: 'コダック',
     zh: '可达鸭',
@@ -487,7 +487,7 @@ export const POKEMON_NAMES = [{
 },{
   names: {
     de: 'entoron',
-    en: 'golduck',
+    en: 'danawa',
     fr: 'akwakwak',
     ja: 'ゴルダック',
     zh: '哥达鸭',
@@ -496,7 +496,7 @@ export const POKEMON_NAMES = [{
 },{
   names: {
     de: 'menki',
-    en: 'mankey',
+    en: 'danapix',
     fr: 'férosinge',
     ja: 'マンキー',
     zh: '猴怪',
@@ -505,7 +505,7 @@ export const POKEMON_NAMES = [{
 },{
   names: {
     de: 'rasaff',
-    en: 'primeape',
+    en: 'danaphant',
     fr: 'colossinge',
     ja: 'オコリザル',
     zh: '火暴猴',
@@ -514,7 +514,7 @@ export const POKEMON_NAMES = [{
 },{
   names: {
     de: 'fukano',
-    en: 'growlithe',
+    en: 'tenkro',
     fr: 'caninos',
     ja: 'ガーディ',
     zh: '卡蒂狗',
@@ -523,7 +523,7 @@ export const POKEMON_NAMES = [{
 },{
   names: {
     de: 'arkani',
-    en: 'arcanine',
+    en: 'senkro',
     fr: 'arcanin',
     ja: 'ウインディ',
     zh: '风速狗',
@@ -532,7 +532,7 @@ export const POKEMON_NAMES = [{
 },{
   names: {
     de: 'quapsel',
-    en: 'poliwag',
+    en: 'gekikro',
     fr: 'ptitard',
     ja: 'ニョロモ',
     zh: '蚊香蝌蚪',
@@ -541,7 +541,7 @@ export const POKEMON_NAMES = [{
 },{
   names: {
     de: 'quaputzi',
-    en: 'poliwhirl',
+    en: 'mossari',
     fr: 'têtarte',
     ja: 'ニョロゾ',
     zh: '蚊香君',
@@ -550,7 +550,7 @@ export const POKEMON_NAMES = [{
 },{
   names: {
     de: 'quappo',
-    en: 'poliwrath',
+    en: 'mossarito',
     fr: 'tartard',
     ja: 'ニョロボン',
     zh: '蚊香泳士',
@@ -559,7 +559,7 @@ export const POKEMON_NAMES = [{
 },{
   names: {
     de: 'abra',
-    en: 'abra',
+    en: 'mossax',
     fr: 'abra',
     ja: 'ケーシィ',
     zh: '凯西',
@@ -568,7 +568,7 @@ export const POKEMON_NAMES = [{
 },{
   names: {
     de: 'kadabra',
-    en: 'kadabra',
+    en: 'mesa',
     fr: 'kadabra',
     ja: 'ユンゲラー',
     zh: '勇基拉',
@@ -577,7 +577,7 @@ export const POKEMON_NAMES = [{
 },{
   names: {
     de: 'simsala',
-    en: 'alakazam',
+    en: 'mesabone',
     fr: 'alakazam',
     ja: 'フーディン',
     zh: '胡地',
@@ -586,7 +586,7 @@ export const POKEMON_NAMES = [{
 },{
   names: {
     de: 'machollo',
-    en: 'machop',
+    en: 'mesathorn',
     fr: 'machoc',
     ja: 'ワンリキー',
     zh: '腕力',
@@ -595,7 +595,7 @@ export const POKEMON_NAMES = [{
 },{
   names: {
     de: 'maschock',
-    en: 'machoke',
+    en: 'winba',
     fr: 'machopeur',
     ja: 'ゴーリキー',
     zh: '豪力',
@@ -604,7 +604,7 @@ export const POKEMON_NAMES = [{
 },{
   names: {
     de: 'machomei',
-    en: 'machamp',
+    en: 'winbus',
     fr: 'mackogneur',
     ja: 'カイリキー',
     zh: '怪力',
@@ -613,7 +613,7 @@ export const POKEMON_NAMES = [{
 },{
   names: {
     de: 'knofensa',
-    en: 'bellsprout',
+    en: 'windora',
     fr: 'chétiflor',
     ja: 'マダツボミ',
     zh: '喇叭芽',
@@ -622,7 +622,7 @@ export const POKEMON_NAMES = [{
 },{
   names: {
     de: 'ultrigaria',
-    en: 'weepinbell',
+    en: 'thunba',
     fr: 'boustiflor',
     ja: 'ウツドン',
     zh: '口呆花',
@@ -631,7 +631,7 @@ export const POKEMON_NAMES = [{
 },{
   names: {
     de: 'sarzenia',
-    en: 'victreebel',
+    en: 'thundor',
     fr: 'empiflor',
     ja: 'ウツボット',
     zh: '大食花',
@@ -640,7 +640,7 @@ export const POKEMON_NAMES = [{
 },{
   names: {
     de: 'tentacha',
-    en: 'tentacool',
+    en: 'thundora',
     fr: 'tentacool',
     ja: 'メノクラゲ',
     zh: '玛瑙水母',
@@ -649,7 +649,7 @@ export const POKEMON_NAMES = [{
 },{
   names: {
     de: 'tentoxa',
-    en: 'tentacruel',
+    en: 'gagong',
     fr: 'tentacruel',
     ja: 'ドククラゲ',
     zh: '毒刺水母',
@@ -658,7 +658,7 @@ export const POKEMON_NAMES = [{
 },{
   names: {
     de: 'kleinstein',
-    en: 'geodude',
+    en: 'gorgong',
     fr: 'racaillou',
     ja: 'イシツブテ',
     zh: '小拳石',
@@ -667,7 +667,7 @@ export const POKEMON_NAMES = [{
 },{
   names: {
     de: 'georok',
-    en: 'graveler',
+    en: 'zeragong',
     fr: 'gravalanch',
     ja: 'ゴローン',
     zh: '隆隆石',
@@ -676,8 +676,8 @@ export const POKEMON_NAMES = [{
 },{
   names: {
     de: 'geowaz',
-    en: 'golem',
-    fr: 'grolem',
+    en: 'koroko',
+    fr: 'koroko',
     ja: 'ゴローニャ',
     zh: '隆隆岩',
   },
@@ -685,7 +685,7 @@ export const POKEMON_NAMES = [{
 },{
   names: {
     de: 'ponita',
-    en: 'ponyta',
+    en: 'korogeki',
     fr: 'ponyta',
     ja: 'ポニータ',
     zh: '小火马',
@@ -694,7 +694,7 @@ export const POKEMON_NAMES = [{
 },{
   names: {
     de: 'gallopa',
-    en: 'rapidash',
+    en: 'korozama',
     fr: 'galopa',
     ja: 'ギャロップ',
     zh: '烈焰马',
@@ -703,7 +703,7 @@ export const POKEMON_NAMES = [{
 },{
   names: {
     de: 'flegmon',
-    en: 'slowpoke',
+    en: 'ojimaru',
     fr: 'ramoloss',
     ja: 'ヤドン',
     zh: '呆呆兽',
@@ -712,7 +712,7 @@ export const POKEMON_NAMES = [{
 },{
   names: {
     de: 'lahmus',
-    en: 'slowbro',
+    en: 'ojidono',
     fr: 'flagadoss',
     ja: 'ヤドラン',
     zh: '呆壳兽',
@@ -721,7 +721,7 @@ export const POKEMON_NAMES = [{
 },{
   names: {
     de: 'magnetilo',
-    en: 'magnemite',
+    en: 'ojizama',
     fr: 'magnéti',
     ja: 'コイル',
     zh: '小磁怪',
