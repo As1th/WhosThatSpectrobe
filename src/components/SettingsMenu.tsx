@@ -37,10 +37,11 @@ const SettingsMenu = ({ isOpen, onClose }: SettingsMenuProps) => {
               );
 
               return (
-                <button
+                <button 
                   onClick={() => dispatch(toggleGeneration(generation.id))}
                   className={classNames({
-                    selected: isActive && willBeActiveNextRound,
+                    deselectedGeneration: !isActive,
+                    selectedGeneration: isActive && willBeActiveNextRound,
                     pending: isActive !== willBeActiveNextRound,
                   })}
                   title={generation.games}
