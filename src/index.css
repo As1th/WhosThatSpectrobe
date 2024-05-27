@@ -405,6 +405,22 @@ header button {
   border-radius: 4px;
 }
 
+.multiple-choice-buttons {
+  display: flex;
+  gap: 10px; /* Add gap between buttons */
+}
+
+.multiple-choice-buttons button {
+  font-size: 125%;
+  padding: 2px 5px;
+  margin-top: 10px;
+  background-color: var(--color-side-box);
+  border-radius: 2px;
+  width: 11ch; /* Set the width to 12 characters */
+  text-align: center; /* Center the text within the button */
+  white-space: nowrap; /* Prevent text wrapping */
+}
+
 footer {
   color: var(--color-text-contrast);
   font-size: 75%;

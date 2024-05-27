@@ -9,6 +9,7 @@ export type SettingsState = {
   forgivingSpellingEnabled: boolean;
   soundEnabled: boolean;
   language: LanguageId;
+  spellingMode: 'exact' | 'forgiving' | 'multipleChoice';
   /** Settings to be applied once the current Pokémon has been guessed */
   pendingSettings: {
     difficulty?: Difficulty;
@@ -18,10 +19,11 @@ export type SettingsState = {
 
 const initialState: SettingsState = {
   difficulty: DIFFICULTY.NORMAL,
-  generations: [1, 2, 3, 4, 5, 6, 7, 8, 9],
+  generations: [1, 2],
   forgivingSpellingEnabled: false,
   soundEnabled: false,
   language: 'en',
+  spellingMode: 'exact',
   pendingSettings: null,
 };
 
@@ -93,6 +95,9 @@ export const settingsSlice = createSlice({
     setLanguage: (state, action: PayloadAction<LanguageId>) => {
       state.language = action.payload;
     },
+    setSpellingMode: (state, action: PayloadAction<'exact' | 'forgiving' | 'multipleChoice'>) => { // Add this action
+      state.spellingMode = action.payload;
+    },
     setAllSettings: (state, action: PayloadAction<SettingsState>) => {
       return {
         ...state,
@@ -113,6 +118,7 @@ export const {
   setSound,
   setForgivingSpellingEnabled,
   setLanguage,
+  setSpellingMode,
   setAllSettings,
   processPendingSettings,
 } = settingsSlice.actions;

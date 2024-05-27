@@ -143,6 +143,15 @@ const AnswerInput = () => {
         </button>
       )}
 
+      {settings.spellingMode === 'multipleChoice' && (
+        <div className="multiple-choice-buttons">
+          <button onClick={() => checkGuess('choice1')}>Choice 1</button>
+          <button onClick={() => checkGuess('choice2')}>Choice 2</button>
+          <button onClick={() => checkGuess('choice3')}>Choice 3</button>
+        </div>
+      )}
+
+      
       {!!settings.pendingSettings && (
         <span className="new-settings-effect">{lang['settingsEffect']}</span>
       )}

@@ -2,7 +2,7 @@ import classNames from 'classnames';
 
 import { DIFFICULTY, GENERATIONS } from '../constants';
 import { useAppDispatch } from '../store';
-import { setDifficulty, setForgivingSpellingEnabled, setSound, toggleGeneration } from '../store/settingsSlice';
+import { setDifficulty, setForgivingSpellingEnabled, setSpellingMode, setSound, toggleGeneration } from '../store/settingsSlice';
 import { useLang, useSettings } from '../util/hooks';
 
 /** These props are only used in the mobile view. The settings menu is always visible on desktop. */
@@ -83,21 +83,30 @@ const SettingsMenu = ({ isOpen, onClose }: SettingsMenuProps) => {
             <h2>{lang.spelling}</h2>
 
             <div className="menu-section-inner">
-              <button
-                onClick={() => dispatch(setForgivingSpellingEnabled(false))}
-                className={`${!settings.forgivingSpellingEnabled ? 'selected' : ''}`}
+            <button
+                onClick={() => {
+                  dispatch(setForgivingSpellingEnabled(false));
+                  dispatch(setSpellingMode('exact'));
+                }}
+                className={`${!settings.forgivingSpellingEnabled && settings.spellingMode === 'exact' ? 'selected' : ''}`}
               >
                 {lang['spelling-exact']}
               </button>
               <button
-                onClick={() => dispatch(setForgivingSpellingEnabled(true))}
-                className={`${settings.forgivingSpellingEnabled ? 'selected' : ''}`}
+                onClick={() => {
+                  dispatch(setForgivingSpellingEnabled(true));
+                  dispatch(setSpellingMode('forgiving'));
+                }}
+                className={`${settings.forgivingSpellingEnabled && settings.spellingMode === 'forgiving' ? 'selected' : ''}`}
               >
                 {lang['spelling-forgiving']}
               </button>
               <button
-                onClick={() => dispatch(setForgivingSpellingEnabled(false))}
-                className={`${settings.forgivingSpellingEnabled ? 'selected' : ''}`}
+                onClick={() => {
+                  dispatch(setForgivingSpellingEnabled(false));
+                  dispatch(setSpellingMode('multipleChoice'));
+                }}
+                className={`${settings.spellingMode === 'multipleChoice' ? 'selected' : ''}`}
               >
                 {"Multiple Choice"}
               </button>
