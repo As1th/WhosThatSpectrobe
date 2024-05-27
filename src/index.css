@@ -298,7 +298,7 @@ header button {
 }
 
 .countdown-loader {
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   position: relative;
