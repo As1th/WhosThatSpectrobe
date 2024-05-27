@@ -58,13 +58,14 @@ const SettingsMenu = ({ isOpen, onClose }: SettingsMenuProps) => {
           <h2>{lang.difficulty}</h2>
 
           <div className="menu-section-inner">
-            {Object.values(DIFFICULTY).map((difficulty) => {
+            {Object.values(DIFFICULTY).map((difficulty, index) => {
               const isActive = difficulty === settings.difficulty;
               const willBecomeActiveNextRound = difficulty === settings.pendingSettings?.difficulty;
 
               return (
                 <button
-                  onClick={() => dispatch(setDifficulty(difficulty))}
+                  key={difficulty}
+                  onClick={index < 3 ? () => dispatch(setDifficulty(difficulty)) : undefined}
                   className={classNames({
                     selected: isActive,
                     pending: willBecomeActiveNextRound,
@@ -93,6 +94,12 @@ const SettingsMenu = ({ isOpen, onClose }: SettingsMenuProps) => {
                 className={`${settings.forgivingSpellingEnabled ? 'selected' : ''}`}
               >
                 {lang['spelling-forgiving']}
+              </button>
+              <button
+                onClick={() => dispatch(setForgivingSpellingEnabled(false))}
+                className={`${settings.forgivingSpellingEnabled ? 'selected' : ''}`}
+              >
+                {"Multiple Choice"}
               </button>
             </div>
           </div>
