@@ -186,7 +186,7 @@ ul {
 }
 
 .settings-generations-grid {
-  display: none;
+  display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
 

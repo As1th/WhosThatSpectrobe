@@ -26,7 +26,7 @@ const SettingsMenu = ({ isOpen, onClose }: SettingsMenuProps) => {
         <h1>{lang.settings}</h1>
 
         <div className="menu-section">
-          {/* <h2>{lang.generation}</h2> */}
+          <h2>{lang.generation}</h2>
 
           <div className="menu-section-inner settings-generations-grid">
             {Object.values(GENERATIONS).map((generation) => {
