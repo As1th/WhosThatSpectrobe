@@ -10,6 +10,10 @@ import { revealPokemon } from '../store/gameSlice';
 import { useCurrentPokemonNumber, useGameState, useLang, useSettings } from '../util/hooks';
 import { removeAccents, soundAlike } from '../util/spelling';
 
+// Utility function to capitalize the first letter of a string
+const capitalizeFirstLetter = (string: string) => {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+};
 
 const AnswerInput = () => {
   const dispatch = useAppDispatch();
@@ -17,10 +21,6 @@ const AnswerInput = () => {
   const settings = useSettings();
   const gameState = useGameState();
 
-  // On mobile, when the user taps the "I don't know button", the input gets blurred and the screen
-  // moves awkwardly. To avoid this, we keep track of the input's focus state, and don't change it to
-  // false until 200ms after blur. We can then use this to refocus the input when "I don't know" was
-  // pressed, while not opening the keyboard if the user didn't have it open.
   const inputRef = useRef<HTMLInputElement>(null);
   const [isInputRecentlyFocused, setIsInputRecentlyFocused] = useState(false);
   const onInputFocus = useCallback(() => setIsInputRecentlyFocused(true), []);
@@ -54,11 +54,6 @@ const AnswerInput = () => {
       setGuess(ev.currentTarget.value);
       checkGuess(ev.currentTarget.value);
     } else {
-      // Chrome on Android has an issue where calling ev.preventDefault() on keydown doesn't
-      // prevent the value from being updated, unlike every other browser. If the user is in
-      // forgiving spelling mode, it's quite possible for them to type too many characters,
-      // and end up with a confusing answer. This workaround fixes the issue by setting the
-      // value to the actual answer if the user types anything while in the "correct" state.
       ev.currentTarget.value = guess;
     }
   };
@@ -75,20 +70,42 @@ const AnswerInput = () => {
 
   const onGiveUp = () => {
     if (isInputRecentlyFocused) {
-      inputRef.current?.focus(); // re-focus the input if this button press blurred it
+      inputRef.current?.focus();
     }
 
     dispatch(revealPokemon({ isCorrect: false }));
     setGuess(pokemonNames[settings.language]);
   };
 
-  // Reset the input when the Pokémon changes.
   useEffect(() => {
-    // This "if" ensures the guess doesn't get cleared when hot reloading during development
     if (!gameState.answered) {
       setGuess('');
     }
   }, [number]);
+
+  const correctName = pokemonNames.en;
+
+  const randomIndexes = useMemo(() => {
+    const indexes = new Set<number>();
+    while (indexes.size < 2) {
+      const index = Math.floor(Math.random() * POKEMON_NAMES.length);
+      if (POKEMON_NAMES[index].names.en !== correctName) {
+        indexes.add(index);
+      }
+    }
+    return Array.from(indexes);
+  }, [correctName]);
+
+  const incorrectNames = randomIndexes.map(index => POKEMON_NAMES[index].names.en);
+
+  const buttonNames = useMemo(() => {
+    const names = [correctName, ...incorrectNames].map(capitalizeFirstLetter);
+    for (let i = names.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [names[i], names[j]] = [names[j], names[i]];
+    }
+    return names;
+  }, [correctName, incorrectNames]);
 
   return (
     <div className="answer-area">
@@ -107,7 +124,6 @@ const AnswerInput = () => {
           onKeyDown={onKeyDown}
           value={guess}
           ref={inputRef}
-          // Add the number as an attribute during development to help make testing easier
           {...(process.env.NODE_ENV !== 'production' ? {
             'data-pokemon-number': number,
           } : {})}
@@ -145,13 +161,12 @@ const AnswerInput = () => {
 
       {settings.spellingMode === 'multipleChoice' && (
         <div className="multiple-choice-buttons">
-          <button onClick={() => checkGuess('choice1')}>Choice 1</button>
-          <button onClick={() => checkGuess('choice2')}>Choice 2</button>
-          <button onClick={() => checkGuess('choice3')}>Choice 3</button>
+          {buttonNames.map((name, index) => (
+            <button key={index} onClick={() => checkGuess(name)}>{name}</button>
+          ))}
         </div>
       )}
 
-      
       {!!settings.pendingSettings && (
         <span className="new-settings-effect">{lang['settingsEffect']}</span>
       )}
