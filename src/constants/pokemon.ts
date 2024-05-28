@@ -1023,6 +1023,15 @@ export const POKEMON_NAMES = [{
     ja: 'モンジャラ',
     zh: '蔓藤怪',
   },
+  number: 113,
+},{
+  names: {
+    de: 'tangela',
+    en: 'tangela',
+    fr: 'saquedeneu',
+    ja: 'モンジャラ',
+    zh: '蔓藤怪',
+  },
   number: 114,
 },{
   names: {
