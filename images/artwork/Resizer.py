@@ -1,7 +1,7 @@
 import os
 from PIL import Image
 
-MAX_WIDTH = 500
+MAX_WIDTH = 475
 MAX_HEIGHT = 415
 
 def resize_and_pad_image(image_path):
