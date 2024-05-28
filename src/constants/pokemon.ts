@@ -649,7 +649,7 @@ export const POKEMON_NAMES = [{
 },{
   names: {
     de: 'tentoxa',
-    en: 'gagong',
+    en: 'tindera',
     fr: 'tentacruel',
     ja: 'ドククラゲ',
     zh: '毒刺水母',
@@ -658,7 +658,7 @@ export const POKEMON_NAMES = [{
 },{
   names: {
     de: 'kleinstein',
-    en: 'gorgong',
+    en: 'zorna',
     fr: 'racaillou',
     ja: 'イシツブテ',
     zh: '小拳石',
@@ -667,7 +667,7 @@ export const POKEMON_NAMES = [{
 },{
   names: {
     de: 'georok',
-    en: 'zeragong',
+    en: 'fulvina',
     fr: 'gravalanch',
     ja: 'ゴローン',
     zh: '隆隆石',
@@ -676,7 +676,7 @@ export const POKEMON_NAMES = [{
 },{
   names: {
     de: 'geowaz',
-    en: 'koroko',
+    en: 'larrup',
     fr: 'koroko',
     ja: 'ゴローニャ',
     zh: '隆隆岩',
@@ -685,7 +685,7 @@ export const POKEMON_NAMES = [{
 },{
   names: {
     de: 'ponita',
-    en: 'korogeki',
+    en: 'voltorn',
     fr: 'ponyta',
     ja: 'ポニータ',
     zh: '小火马',
@@ -694,7 +694,7 @@ export const POKEMON_NAMES = [{
 },{
   names: {
     de: 'gallopa',
-    en: 'korozama',
+    en: 'artezza',
     fr: 'galopa',
     ja: 'ギャロップ',
     zh: '烈焰马',
@@ -703,7 +703,7 @@ export const POKEMON_NAMES = [{
 },{
   names: {
     de: 'flegmon',
-    en: 'ojimaru',
+    en: 'shulla',
     fr: 'ramoloss',
     ja: 'ヤドン',
     zh: '呆呆兽',
@@ -712,7 +712,7 @@ export const POKEMON_NAMES = [{
 },{
   names: {
     de: 'lahmus',
-    en: 'ojidono',
+    en: 'shulla',
     fr: 'flagadoss',
     ja: 'ヤドラン',
     zh: '呆壳兽',
@@ -721,300 +721,300 @@ export const POKEMON_NAMES = [{
 },{
   names: {
     de: 'magnetilo',
-    en: 'ojizama',
+    en: 'gagong',
     fr: 'magnéti',
     ja: 'コイル',
     zh: '小磁怪',
   },
-  number: 81,
+  number: 80,
 },{
   names: {
     de: 'magneton',
-    en: 'tamazoa',
+    en: 'gorgong',
     fr: 'magnéton',
     ja: 'レアコイル',
     zh: '三合一磁怪',
   },
-  number: 82,
+  number: 81,
 },{
   names: {
     de: 'porenta',
-    en: "tiazoa",
+    en: "zeragong",
     fr: 'canarticho',
     ja: 'カモネギ',
     zh: '大葱鸭',
   },
-  number: 83,
+  number: 82,
 },{
   names: {
     de: 'dodu',
-    en: 'gokazoa',
+    en: 'koroko',
     fr: 'doduo',
     ja: 'ドードー',
     zh: '嘟嘟',
   },
-  number: 84,
+  number: 83,
 },{
   names: {
     de: 'dodri',
-    en: 'mugon',
+    en: 'korogeki',
     fr: 'dodrio',
     ja: 'ドードリオ',
     zh: '嘟嘟利',
   },
-  number: 85,
+  number: 84,
 },{
   names: {
     de: 'jurob',
-    en: 'chomugon',
+    en: 'korozama',
     fr: 'otaria',
     ja: 'パウワウ',
     zh: '小海狮',
   },
-  number: 86,
+  number: 85,
 },{
   names: {
     de: 'jugong',
-    en: 'gekimugon',
+    en: 'ojimaru',
     fr: 'lamantine',
     ja: 'ジュゴン',
     zh: '白海狮',
   },
-  number: 87,
+  number: 86,
 },{
   names: {
     de: 'sleima',
-    en: 'shimainu',
+    en: 'ojidono',
     fr: 'tadmorv',
     ja: 'ベトベター',
     zh: '臭泥',
   },
-  number: 88,
+  number: 87,
 },{
   names: {
     de: 'sleimok',
-    en: 'shimanoto',
+    en: 'ojizama',
     fr: 'grotadmorv',
     ja: 'ベトベトン',
     zh: '臭臭泥',
   },
-  number: 89,
+  number: 88,
 },{
   names: {
     de: 'muschas',
-    en: 'shimadoros',
+    en: 'tamazoa',
     fr: 'kokiyas',
     ja: 'シェルダー',
     zh: '大舌贝',
   },
-  number: 90,
+  number: 89,
 },{
   names: {
     de: 'austos',
-    en: 'darucho',
+    en: 'tiazoa',
     fr: 'crustabri',
     ja: 'パルシェン',
     zh: '刺甲贝',
   },
-  number: 91,
+  number: 90,
 },{
   names: {
     de: 'nebulak',
-    en: 'darutori',
+    en: 'gokazoa',
     fr: 'fantominus',
     ja: 'ゴース',
     zh: '鬼斯',
   },
-  number: 92,
+  number: 91,
 },{
   names: {
     de: 'alpollo',
-    en: 'darutake',
+    en: 'mugon',
     fr: 'spectrum',
     ja: 'ゴースト',
     zh: '鬼斯通',
   },
-  number: 93,
+  number: 92,
 },{
   names: {
     de: 'gengar',
-    en: 'boma',
+    en: 'chomugon',
     fr: 'ectoplasma',
     ja: 'ゲンガー',
     zh: '耿鬼',
   },
-  number: 94,
+  number: 93,
 },{
   names: {
     de: 'onix',
-    en: 'boma-boma',
+    en: 'gekimugon',
     fr: 'onix',
     ja: 'イワーク',
     zh: '大岩蛇',
   },
-  number: 95,
+  number: 94,
 },{
   names: {
     de: 'traumato',
-    en: 'doma-boma',
+    en: 'shimainu',
     fr: 'soporifik',
     ja: 'スリープ',
     zh: '催眠貘',
   },
-  number: 96,
+  number: 95,
 },{
   names: {
     de: 'hypno',
-    en: 'azapi',
+    en: 'shimanoto',
     fr: 'hypnomade',
     ja: 'スリーパー',
     zh: '引梦貘人',
   },
-  number: 97,
+  number: 96,
 },{
   names: {
     de: 'krabby',
-    en: 'azamaru',
+    en: 'shimadoros',
     fr: 'krabby',
     ja: 'クラブ',
     zh: '大钳蟹',
   },
-  number: 98,
+  number: 97,
 },{
   names: {
     de: 'kingler',
-    en: 'azamaros',
+    en: 'darucho',
     fr: 'krabboss',
     ja: 'キングラー',
     zh: '巨钳蟹',
   },
-  number: 99,
+  number: 98,
 },{
   names: {
     de: 'voltobal',
-    en: 'senpu',
+    en: 'darutori',
     fr: 'voltorbe',
     ja: 'ビリリダマ',
     zh: '霹雳电球',
   },
-  number: 100,
+  number: 99,
 },{
   names: {
     de: 'lektrobal',
-    en: 'senpura',
+    en: 'darutake',
     fr: 'électrode',
     ja: 'マルマイン',
     zh: '顽皮雷弹',
   },
-  number: 101,
+  number: 100,
 },{
   names: {
     de: 'owei',
-    en: 'senpuga',
+    en: 'boma',
     fr: 'noeunoeuf',
     ja: 'タマタマ',
     zh: '蛋蛋',
   },
-  number: 102,
+  number: 101,
 },{
   names: {
     de: 'kokowei',
-    en: 'azeko',
+    en: 'boma-boma',
     fr: 'noadkoko',
     ja: 'ナッシー',
     zh: '椰蛋树',
   },
-  number: 103,
+  number: 102,
 },{
   names: {
     de: 'tragosso',
-    en: 'azenor',
+    en: 'doma-boma',
     fr: 'osselait',
     ja: 'カラカラ',
     zh: '卡拉卡拉',
   },
-  number: 104,
+  number: 103,
 },{
   names: {
     de: 'knogga',
-    en: 'azewana',
+    en: 'azapi',
     fr: 'ossatueur',
     ja: 'ガラガラ',
     zh: '嘎啦嘎啦',
   },
-  number: 105,
+  number: 104,
 },{
   names: {
     de: 'kicklee',
-    en: 'mantrador',
+    en: 'azamaru',
     fr: 'kicklee',
     ja: 'サワムラー',
     zh: '飞腿郎',
   },
-  number: 106,
+  number: 105,
 },{
   names: {
     de: 'nockchan',
-    en: 'mantradora',
+    en: 'azamaros',
     fr: 'tygnon',
     ja: 'エビワラー',
     zh: '快拳郎',
   },
-  number: 107,
+  number: 106,
 },{
   names: {
     de: 'schlurp',
-    en: 'mantrados',
+    en: 'senpu',
     fr: 'excelangue',
     ja: 'ベロリンガ',
     zh: '大舌头',
   },
-  number: 108,
+  number: 107,
 },{
   names: {
     de: 'smogon',
-    en: 'pago',
+    en: 'senpura',
     fr: 'smogo',
     ja: 'ドガース',
     zh: '瓦斯弹',
   },
-  number: 109,
+  number: 108,
 },{
   names: {
     de: 'smogmog',
-    en: 'pagoni',
+    en: 'senpuga',
     fr: 'smogogo',
     ja: 'マタドガス',
     zh: '双弹瓦斯',
   },
-  number: 110,
+  number: 109,
 },{
   names: {
     de: 'rihorn',
-    en: 'pagoyama',
+    en: 'azeko',
     fr: 'rhinocorne',
     ja: 'サイホーン',
     zh: '独角犀牛',
   },
-  number: 111,
+  number: 110,
 },{
   names: {
     de: 'rizeros',
-    en: 'rhydon',
+    en: 'azenor',
     fr: 'rhinoféros',
     ja: 'サイドン',
     zh: '钻角犀兽',
   },
-  number: 112,
+  number: 111,
 },{
   names: {
     de: 'chaneira',
-    en: 'chansey',
+    en: 'azewana',
     fr: 'leveinard',
     ja: 'ラッキー',
     zh: '吉利蛋',
   },
-  number: 113,
+  number: 112,
 },{
   names: {
     de: 'tangela',
