@@ -138,7 +138,7 @@ const AnswerInput = () => {
 
       {gameState.answered ? (
         <div className="also-known-as">
-          <h2 onClick={handleClick}>Next!<br></br>(Type Enter ⏎ Above)</h2>
+          <h2 onClick={handleClick}>Next! <i>(Type Enter ⏎ Above)</i></h2>
           <ul>
             {Object.values(LANGUAGES)
               .filter((lang) => lang.code !== settings.language)
