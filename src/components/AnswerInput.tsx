@@ -7,6 +7,7 @@ import { POKEMON_NAMES } from '../constants/pokemon';
 import { useAppDispatch } from '../store';
 import { goToNextPokemon } from '../store/actions';
 import { revealPokemon } from '../store/gameSlice';
+import { setAnswered } from '../store/statsSlice';
 import { useCurrentPokemonNumber, useGameState, useLang, useSettings } from '../util/hooks';
 import { removeAccents, soundAlike } from '../util/spelling';
 
@@ -31,10 +32,12 @@ const AnswerInput = () => {
   const [guess, setGuess] = useState('');
   const [buttonsDisabled, setButtonsDisabled] = useState(false);
   const [buttonNames, setButtonNames] = useState<string[]>([]);
+  const [timeStarted, setTimeStarted] = useState(Date.now());
   
   const handleClick = () => {
     dispatch(goToNextPokemon());
     setButtonsDisabled(false); // Re-enable buttons for the next round
+    setTimeStarted(Date.now()); // Reset timer for the next round
   };
   
   const number = useCurrentPokemonNumber();
@@ -46,12 +49,20 @@ const AnswerInput = () => {
     const normalisedGuess = removeAccents(guess.toLowerCase());
     const normalisedAnswer = removeAccents(pokemonNames[settings.language]);
 
-    if (
-      (settings.forgivingSpellingEnabled && settings.language === 'en' && soundAlike(normalisedGuess, normalisedAnswer))
-      || (normalisedGuess === normalisedAnswer)) {
+    const isCorrect = (settings.forgivingSpellingEnabled && settings.language === 'en' && soundAlike(normalisedGuess, normalisedAnswer))
+      || (normalisedGuess === normalisedAnswer);
+
+    if (isCorrect) {
       dispatch(revealPokemon({ isCorrect: true }));
       setGuess(pokemonNames[settings.language]);
       setButtonsDisabled(true); // Disable buttons after correct guess
+      dispatch(setAnswered({
+        isCorrect: true,
+        difficulty: settings.difficulty,
+        timeStarted,
+        pokemonNumber: number,
+        mode: settings.spellingMode,
+      }));
     }
   };
 
@@ -71,6 +82,7 @@ const AnswerInput = () => {
       if (ev.key === 'Enter') {
         dispatch(goToNextPokemon());
         setButtonsDisabled(false); // Re-enable buttons for the next round
+        setTimeStarted(Date.now()); // Reset timer for the next round
       }
     }
   };
@@ -83,12 +95,20 @@ const AnswerInput = () => {
     dispatch(revealPokemon({ isCorrect: false }));
     setGuess(pokemonNames[settings.language]);
     setButtonsDisabled(true); // Disable buttons after giving up
+    dispatch(setAnswered({
+      isCorrect: false,
+      difficulty: settings.difficulty,
+      timeStarted,
+      pokemonNumber: number,
+      mode: settings.spellingMode,
+    }));
   };
 
   useEffect(() => {
     if (!gameState.answered) {
       setGuess('');
       setButtonsDisabled(false); // Re-enable buttons when the Pokemon changes
+      setTimeStarted(Date.now()); // Start timer for the new round
 
       // Generate new button names
       const correctName = pokemonNames.en;

@@ -27,14 +27,25 @@ const StatsMenu = ({ isOpen, onClose }: StatsMenuProps) => {
     const pokemonStats = stats.pokemon[number];
     if (!pokemonStats) return null;
 
+    const mode = settings.spellingMode;
+    const baseTime = stats.lastSeen[0].time;
+    let adjustedTime = baseTime;
+
+    // Apply penalties based on mode
+    if (mode === 'multipleChoice') {
+      adjustedTime += 2000; // 2 second penalty
+    } else if (mode === 'forgiving') {
+      adjustedTime += 1000; // 1 second penalty
+    }
+
     return {
       name: POKEMON_NAMES.find((pkmn) => pkmn.number === number)!.names[settings.language],
       timesSeen: pokemonStats.timesSeen,
       percentage: Math.ceil((pokemonStats.timesCorrect / pokemonStats.timesSeen) * 100),
-      timeTaken: stats.lastSeen[0].time,
+      timeTaken: adjustedTime,
       averageTime: pokemonStats.timesCorrect > 0 ? pokemonStats.totalTime / pokemonStats.timesCorrect : null,
     };
-  }, [stats, settings.language]);
+  }, [stats, settings.language, settings.spellingMode]);
 
   return (
     <>

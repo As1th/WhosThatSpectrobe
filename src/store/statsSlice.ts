@@ -91,6 +91,7 @@ type AnswerPayload = {
   difficulty: Difficulty;
   timeStarted: number;
   pokemonNumber: PokemonNumber;
+  mode: 'multipleChoice' | 'forgiving' | 'exact';
 };
 
 const DEFAULT_POKEMON_STAT: PokemonStat = {
@@ -104,7 +105,14 @@ export const statsSlice = createSlice({
   initialState,
   reducers: {
     setAnswered: (state, { payload }: PayloadAction<AnswerPayload>) => {
-      const timeTaken = Math.min(Date.now() - payload.timeStarted, MAX_TIME_TO_RECORD);
+      let timeTaken = Math.min(Date.now() - payload.timeStarted, MAX_TIME_TO_RECORD);
+
+      // Apply penalties based on mode
+      if (payload.mode === 'multipleChoice') {
+        timeTaken += 2000; // 2 second penalty
+      } else if (payload.mode === 'forgiving') {
+        timeTaken += 1000; // 1 second penalty
+      }
 
       // Handle times and streaks
       if (payload.isCorrect) {
