@@ -25,7 +25,7 @@ export const GENERATIONS: { [key in GenerationId]: Generation } = {
   1: {
     id: 1,
     start: 1,
-    end: 79,
+    end: 72,
     supportedDifficulties: [DIFFICULTY.NORMAL, DIFFICULTY.ULTRA, DIFFICULTY.MASTER, DIFFICULTY.ELITE, DIFFICULTY.EASY],
     games: 'Spectrobes 1 Roster',
   },
