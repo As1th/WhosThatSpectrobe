@@ -711,15 +711,6 @@ export const POKEMON_NAMES = [{
   number: 79,
 },{
   names: {
-    de: 'lahmus',
-    en: 'shulla',
-    fr: 'flagadoss',
-    ja: 'ヤドラン',
-    zh: '呆壳兽',
-  },
-  number: 80,
-},{
-  names: {
     de: 'magnetilo',
     en: 'gagong',
     fr: 'magnéti',
