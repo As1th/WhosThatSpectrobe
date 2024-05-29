@@ -29,9 +29,14 @@ const AnswerInput = () => {
   }, []);
 
   const [guess, setGuess] = useState('');
+  const [buttonsDisabled, setButtonsDisabled] = useState(false);
+  const [buttonNames, setButtonNames] = useState<string[]>([]);
+  
   const handleClick = () => {
     dispatch(goToNextPokemon());
+    setButtonsDisabled(false); // Re-enable buttons for the next round
   };
+  
   const number = useCurrentPokemonNumber();
   const pokemonNames = useMemo(() => (
     POKEMON_NAMES.find((pokemon) => pokemon.number === number)!.names
@@ -46,6 +51,7 @@ const AnswerInput = () => {
       || (normalisedGuess === normalisedAnswer)) {
       dispatch(revealPokemon({ isCorrect: true }));
       setGuess(pokemonNames[settings.language]);
+      setButtonsDisabled(true); // Disable buttons after correct guess
     }
   };
 
@@ -64,6 +70,7 @@ const AnswerInput = () => {
 
       if (ev.key === 'Enter') {
         dispatch(goToNextPokemon());
+        setButtonsDisabled(false); // Re-enable buttons for the next round
       }
     }
   };
@@ -75,44 +82,50 @@ const AnswerInput = () => {
 
     dispatch(revealPokemon({ isCorrect: false }));
     setGuess(pokemonNames[settings.language]);
+    setButtonsDisabled(true); // Disable buttons after giving up
   };
 
   useEffect(() => {
     if (!gameState.answered) {
       setGuess('');
-    }
-  }, [number]);
+      setButtonsDisabled(false); // Re-enable buttons when the Pokemon changes
 
-  const correctName = pokemonNames.en;
+      // Generate new button names
+      const correctName = pokemonNames.en;
 
-  const randomIndexes = useMemo(() => {
-    const indexes = new Set<number>();
-    while (indexes.size < 2) {
-      const index = Math.floor(Math.random() * POKEMON_NAMES.length);
-      if (POKEMON_NAMES[index].names.en !== correctName) {
-        indexes.add(index);
+      const randomIndexes = new Set<number>();
+      while (randomIndexes.size < 2) {
+        const index = Math.floor(Math.random() * POKEMON_NAMES.length);
+        if (POKEMON_NAMES[index].names.en !== correctName) {
+          randomIndexes.add(index);
+        }
       }
-    }
-    return Array.from(indexes);
-  }, [correctName]);
+      const incorrectNames = Array.from(randomIndexes).map(index => POKEMON_NAMES[index].names.en);
 
-  const incorrectNames = randomIndexes.map(index => POKEMON_NAMES[index].names.en);
+      const newButtonNames = [correctName, ...incorrectNames].map(capitalizeFirstLetter);
+      for (let i = newButtonNames.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [newButtonNames[i], newButtonNames[j]] = [newButtonNames[j], newButtonNames[i]];
+      }
+      setButtonNames(newButtonNames);
 
-  const buttonNames = useMemo(() => {
-    const names = [correctName, ...incorrectNames].map(capitalizeFirstLetter);
-    for (let i = names.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [names[i], names[j]] = [names[j], names[i]];
     }
-    return names;
-  }, [correctName, incorrectNames]);
+  }, [number, gameState.answered, pokemonNames]);
+
+  const handleMultipleChoiceClick = (name: string) => {
+    if (name === capitalizeFirstLetter(pokemonNames.en)) {
+      checkGuess(name);
+    } else {
+      onGiveUp();
+    }
+  };
 
   return (
     <div className="answer-area">
       <div className="answer-input-container">
         <input
           type="text"
-          className={`answer-input ${gameState.answered ? 'answer-input-correct' : ''}`}
+          className={`answer-input ${gameState.answered === 'correct' ? 'answer-input-correct' : gameState.answered === 'incorrect' ? 'answer-input-incorrect' : ''}`}
           name="pokemonGuess"
           autocomplete="off"
           autocorrect="off"
@@ -124,6 +137,7 @@ const AnswerInput = () => {
           onKeyDown={onKeyDown}
           value={guess}
           ref={inputRef}
+          disabled={settings.spellingMode === 'multipleChoice'}
           {...(process.env.NODE_ENV !== 'production' ? {
             'data-pokemon-number': number,
           } : {})}
@@ -138,7 +152,7 @@ const AnswerInput = () => {
 
       {gameState.answered ? (
         <div className="also-known-as">
-          <h2 onClick={handleClick}>Next! <i>(Type Enter ⏎ Above)</i></h2>
+          <h2 onClick={handleClick}>Next!<br></br>(Type Enter ⏎ Above)</h2>
           <ul>
             {Object.values(LANGUAGES)
               .filter((lang) => lang.code !== settings.language)
@@ -162,7 +176,13 @@ const AnswerInput = () => {
       {settings.spellingMode === 'multipleChoice' && (
         <div className="multiple-choice-buttons">
           {buttonNames.map((name, index) => (
-            <button key={index} onClick={() => checkGuess(name)}>{name}</button>
+            <button
+              key={index}
+              onClick={() => handleMultipleChoiceClick(name)}
+              disabled={buttonsDisabled}
+            >
+              {name}
+            </button>
           ))}
         </div>
       )}

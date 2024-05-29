@@ -571,7 +571,15 @@ footer a {
     background-color: rgba(0, 0, 0, 0.1);
     gap: 0;
   }
-
+  .answer-input-correct {
+    background-color: green;
+    color: white;
+  }
+  
+  .answer-input-incorrect {
+    background-color: red;
+    color: white;
+  }
   .answer-input-container {
     width: 100%;
   }
@@ -589,7 +597,7 @@ footer a {
   .also-known-as {
     display: none;
     width: 100%;
-    padding-right: 60px; /* try to avoid overlaying the count text */
+   /* padding-right: 60px; /* try to avoid overlaying the count text */
   }
 
   .also-known-as h2 {
