@@ -83,7 +83,7 @@ const SettingsMenu = ({ isOpen, onClose }: SettingsMenuProps) => {
             <h2>{lang.spelling}</h2>
 
             <div className="menu-section-inner">
-            <button
+              <button
                 onClick={() => {
                   dispatch(setForgivingSpellingEnabled(false));
                   dispatch(setSpellingMode('exact'));
@@ -111,6 +111,17 @@ const SettingsMenu = ({ isOpen, onClose }: SettingsMenuProps) => {
                 {"Multiple Choice"}
               </button>
             </div>
+            
+            {settings.spellingMode === 'forgiving' && (
+              <div className="menu-section menu-section-inner time-penalty-message">
+                Forgiving mode includes a 1 second time penalty.
+              </div>
+            )}
+            {settings.spellingMode === 'multipleChoice' && (
+              <div className="menu-section menu-section-inner time-penalty-message">
+                 Multiple Choice mode includes a 2 second time penalty.
+              </div>
+            )}
           </div>
         )}
 

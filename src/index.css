@@ -197,6 +197,15 @@ ul {
   font-size: 80%;
 }
 
+.time-penalty-message{
+  font-size: 80%;
+  color: var(--color-text-contrast);
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding: 5px;
+  gap: 10px;
+
+}
 .settings-generations-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
