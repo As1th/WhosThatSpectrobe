@@ -16,12 +16,12 @@ const StatsListener = () => {
 
   useEffect(() => {
     if (gameState.answered) {
-      dispatch(setAnswered({
+      /* dispatch(setAnswered({
         difficulty: settings.difficulty,
         isCorrect: gameState.answered === 'correct',
         pokemonNumber: pokemonNumber,
         timeStarted: gameState.lastLoadedTime,
-      }));
+      })); */
     }
   }, [gameState.answered]);
 
