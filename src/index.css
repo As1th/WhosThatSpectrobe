@@ -604,14 +604,14 @@ footer a {
   }
 
   .also-known-as {
-    display: none;
+    
     width: 100%;
    /* padding-right: 60px; /* try to avoid overlaying the count text */
   }
 
-  .also-known-as h2 {
+  /* .also-known-as h2 {
     display: none;
-  }
+  } */
 
   .also-known-as ul {
     flex-wrap: nowrap;
