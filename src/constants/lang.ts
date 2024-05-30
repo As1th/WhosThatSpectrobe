@@ -44,7 +44,7 @@ const LANG_EN = {
   sound: 'Sound',
   on: 'On',
   off: 'Off',
-  streak: 'Streak',
+  streak: 'Typing Streak',
   best: 'Best',
   current: 'Current',
   previous: 'Previous',

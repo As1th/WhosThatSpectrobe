@@ -2,7 +2,7 @@ import { useMemo, useState } from 'preact/hooks';
 
 import StatsModal from './StatsModal';
 import { POKEMON_NAMES } from '../constants/pokemon';
-import { useGameState, useLang, useSettings, useStats } from '../util/hooks';
+import { useLang, useSettings, useStats } from '../util/hooks';
 import { formatStatTime } from '../util/stats';
 
 /** These props are only used in the mobile view. The stats menu is always visible on desktop. */
@@ -31,12 +31,7 @@ const StatsMenu = ({ isOpen, onClose }: StatsMenuProps) => {
     const baseTime = stats.lastSeen[0].time;
     let adjustedTime = baseTime;
 
-    // Apply penalties based on mode
-    if (mode === 'multipleChoice') {
-      adjustedTime += 2000; // 2 second penalty
-    } else if (mode === 'forgiving') {
-      adjustedTime += 1000; // 1 second penalty
-    }
+    
 
     return {
       name: POKEMON_NAMES.find((pkmn) => pkmn.number === number)!.names[settings.language],
@@ -70,6 +65,26 @@ const StatsMenu = ({ isOpen, onClose }: StatsMenuProps) => {
               <h3>{lang.best}</h3>
               <span className="stats-number">
                 {stats.streaks.best[settings.difficulty]}
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div className="menu-section">
+          <h2>{"Choice Streak"}</h2>
+
+          <div className="menu-section-inner">
+            <div>
+              <h3>{lang.current}</h3>
+              <span className="stats-number">
+                {stats.streaks.multipleChoiceCurrent}
+              </span>
+            </div>
+
+            <div>
+              <h3>{lang.best}</h3>
+              <span className="stats-number">
+                {stats.streaks.multipleChoiceBest}
               </span>
             </div>
           </div>

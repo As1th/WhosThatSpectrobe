@@ -189,7 +189,7 @@ const AnswerInput = () => {
           className="dont-know-button"
           onClick={onGiveUp}
         >
-          {lang.dontknow}
+          I don't know!<br></br> ㅤ
         </button>
       )}
 

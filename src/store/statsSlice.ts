@@ -37,6 +37,8 @@ export type StatsState = {
   streaks: {
     current: StatsPerDifficultyArray<number>;
     best: StatsPerDifficultyArray<number>;
+    multipleChoiceCurrent: number;
+    multipleChoiceBest: number;
   };
   times: {
     best: StatsPerDifficultyArray<SingleTimeStat>;
@@ -60,6 +62,8 @@ const initialState: StatsState = {
   streaks: {
     current: [0, 0, 0, 0, 0],
     best: [0, 0, 0, 0, 0],
+    multipleChoiceCurrent: 0,
+    multipleChoiceBest: 0,
   },
   times: {
     best: [
@@ -113,13 +117,18 @@ export const statsSlice = createSlice({
       } else if (payload.mode === 'forgiving') {
         timeTaken += 1000; // 1 second penalty
       }
-
       // Handle times and streaks
       if (payload.isCorrect) {
-        state.streaks.current[payload.difficulty] += 1;
-
-        if (state.streaks.current[payload.difficulty] > state.streaks.best[payload.difficulty]) {
-          state.streaks.best[payload.difficulty] = state.streaks.current[payload.difficulty];
+        if (payload.mode === 'multipleChoice') {
+          state.streaks.multipleChoiceCurrent += 1;
+          if (state.streaks.multipleChoiceCurrent > state.streaks.multipleChoiceBest) {
+            state.streaks.multipleChoiceBest = state.streaks.multipleChoiceCurrent;
+          }
+        } else {
+          state.streaks.current[payload.difficulty] += 1;
+          if (state.streaks.current[payload.difficulty] > state.streaks.best[payload.difficulty]) {
+            state.streaks.best[payload.difficulty] = state.streaks.current[payload.difficulty];
+          }
         }
 
         const timeStat: SingleTimeStat = {
@@ -136,7 +145,11 @@ export const statsSlice = createSlice({
         state.times.total[payload.difficulty].time += timeStat.time;
         state.times.total[payload.difficulty].guesses += 1;
       } else {
-        state.streaks.current[payload.difficulty] = 0;
+        if (payload.mode === 'multipleChoice') {
+          state.streaks.multipleChoiceCurrent = 0;
+        } else {
+          state.streaks.current[payload.difficulty] = 0;
+        }
       }
 
       // Handle Pokemon-specific stats
