@@ -172,7 +172,7 @@ const AnswerInput = () => {
 
       {gameState.answered ? (
         <div className="also-known-as">
-          <h2 onClick={handleClick}>Next!<br></br>(Type Enter ⏎ Above in Typing Modes)</h2>
+          <h2 onClick={handleClick}><i><u><span style="font-size: 110%">Next!</span></u></i><br></br><span style="font-size: 90%">(Or Type Enter ⏎ Above in Typing Modes)</span></h2>
           <ul>
             {Object.values(LANGUAGES)
               .filter((lang) => lang.code !== settings.language)
@@ -189,7 +189,7 @@ const AnswerInput = () => {
           className="dont-know-button"
           onClick={onGiveUp}
         >
-          I don't know!<br></br> ㅤ
+          <u><i>I don't know!</i></u><br></br> ㅤ
         </button>
       )}
 
